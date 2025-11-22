@@ -30,7 +30,7 @@ export default function Stats() {
       
       const deleteUrl = async () => {
         try {
-          await axios.delete(`https://urlbackend-gold.vercel.app/url/${code}`, {
+          await axios.delete(`https://urlbackend-gold.vercel.app/api/${code}`, {
             headers: { Authorization: `Bearer ${token}` }
           });
       

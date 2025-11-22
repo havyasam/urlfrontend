@@ -16,7 +16,7 @@ export default function Stats() {
         const fetchUrlData = async () => {
           try {
               console.log("hii")
-            const res = await axios.get(`https://urlbackend-gold.vercel.app/api/links/${code}`);
+            const res = await axios.get(`https://urlbackend-hdsp.vercel.app/links/${code}`);
             console.log("heloo")
             setUrlData(res.data);
           } catch (err) {
@@ -30,7 +30,7 @@ export default function Stats() {
       
       const deleteUrl = async () => {
         try {
-          await axios.delete(`https://urlbackend-gold.vercel.app/api/${code}`, {
+          await axios.delete(`https://urlbackend-hdsp.vercel.app/${code}`, {
             headers: { Authorization: `Bearer ${token}` }
           });
       
@@ -64,7 +64,7 @@ export default function Stats() {
     const handleLogin = async (e) => {
       e.preventDefault();
       try {
-        const res = await axios.post("https://urlbackend-gold.vercel.app/login", {
+        const res = await axios.post("https://urlbackend-hdsp.vercel.app/login", {
           email,
           password,
         });
@@ -81,7 +81,7 @@ export default function Stats() {
     const handleRegister = async (e) => {
       e.preventDefault();
       try {
-        await axios.post("https://urlbackend-gold.vercel.app/register", {
+        await axios.post("https://urlbackend-hdsp.vercel.app/register", {
           name: regName,
           email: regEmail,
           password: regPassword,
@@ -337,8 +337,8 @@ export default function Stats() {
 
     <p style={{color:"black"}}>
       <strong style={{color:"black"}}>Short URL:</strong>{" "}
-      <a href={`https://urlbackend-gold.vercel.app/${urlData.short_code}`} target="_blank">
-        https://urlbackend-gold.vercel.app/{urlData.short_code}
+      <a href={`https://urlbackend-hdsp.vercel.app/${urlData.short_code}`} target="_blank">
+        https://urlbackend-hdsp.vercel.app/{urlData.short_code}
       </a>
     </p>
     

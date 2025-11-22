@@ -10,7 +10,7 @@ export default function Health() {
   const fetchHealth = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("https://urlbackend-gold.vercel.app/healthz");
+      const res = await axios.get("https://urlbackend-hdsp.vercel.app/healthz");
       setHealth(res.data);
     } catch (err) {
       setHealth({ ok: false, error: "Server unreachable" });
@@ -38,7 +38,7 @@ export default function Health() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://urlbackend-gold.vercel.app/login", {
+      const res = await axios.post("https://urlbackend-hdsp.vercel.app/login", {
         email,
         password,
       });
@@ -54,7 +54,7 @@ export default function Health() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://urlbackend-gold.vercel.app/register", {
+      await axios.post("https://urlbackend-hdsp.vercel.app/register", {
         name: regName,
         email: regEmail,
         password: regPassword,

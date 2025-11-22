@@ -29,7 +29,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (token) {
-      axios.get("https://urlbackend-gold.vercel.app/api/links", {
+      axios.get("https://urlbackend-hdsp.vercel.app/api/links", {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -43,7 +43,7 @@ const Dashboard = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://urlbackend-gold.vercel.app/login", {
+      const res = await axios.post("https://urlbackend-hdsp.vercel.app/login", {
         email,
         password,
       });
@@ -60,7 +60,7 @@ const Dashboard = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://urlbackend-gold.vercel.app/register", {
+      await axios.post("https://urlbackend-hdsp.vercel.app/register", {
         name: regName,
         email: regEmail,
         password: regPassword,
@@ -78,7 +78,7 @@ const Dashboard = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://urlbackend-gold.vercel.app/shorten",
+        "https://urlbackend-hdsp.vercel.app/shorten",
         { longUrl, customCode },
         {
           headers: {
@@ -446,10 +446,10 @@ const Dashboard = () => {
 
           <strong style={{color:"black"}}>Short:</strong>{" "}
           <a
-            href={`https://urlbackend-gold.vercel.app/api/${link.short_code}`}
+            href={`https://urlbackend-hdsp.vercel.app/${link.short_code}`}
             target="_blank"
           >
-            https://urlbackend-gold.vercel.app/api/{link.short_code}
+            https://urlbackend-hdsp.vercel.app/{link.short_code}
           </a>
         </p>
         {/* <p style={{color:"black"}}>
